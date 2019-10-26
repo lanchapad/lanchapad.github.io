@@ -47,7 +47,13 @@ function tooglemotor(){
   btnchk = document.getElementById("toggle");
   if (btnchk.checked == true){
     console.log("prender");
+    message = new Paho.MQTT.Message('{"motor": 1}');
+    message.destinationName = "/lanchapad";
+    client.send(message);
   } else {
     console.log("apagar");
+    message = new Paho.MQTT.Message('{"motor": 0}');
+    message.destinationName = "/lanchapad";
+    client.send(message);
   }
 }
