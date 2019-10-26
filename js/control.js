@@ -44,7 +44,7 @@
 
 
 function tooglemotor(){
-  btnchk = document.getElementById("toogle");
+  btnchk = document.getElementById("toggle");
   if (btnchk.checked == true){
     console.log("prender");
   } else {
