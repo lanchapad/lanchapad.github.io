@@ -15,7 +15,12 @@
 
 <div class="pure-g">
     <div class="pure-u-1-3" style="height: 85vh; padding-top: 5vh;">
-        <a id= "izq" class="button large square red" href="#" onmousedown="direction(this,-1)" onmouseup="direction(this, 0)" oncontextmenu="return false;"></a>
+        <a id= "izq" class="button large square red" href="#" 
+                    onmousedown="direction(this,-1)" 
+                    ontouchstart="direction(this,-1)" 
+                    onmouseup="direction(this, 0)" 
+                    ontouchend="direction(this, 0)" 
+                    oncontextmenu="return false;"></a>
     </div>
     
     <div class="pure-u-1-3">
@@ -31,7 +36,12 @@
     </div>
     
     <div class="pure-u-1-3" style="height: 85vh; padding-top: 5vh;">
-        <a id="der" class="button large square blue" href="#" href="#" onmousedown="direction(this,1)"  onmouseup="direction(this, 0)" oncontextmenu="return false;"></a>
+        <a id="der" class="button large square blue" href="#" href="#" 
+        onmousedown="direction(this,1)"
+        ontouchstart="direction(this,-1)"   
+        onmouseup="direction(this, 0)" 
+        ontouchend="direction(this, 0)" 
+        oncontextmenu="return false;"></a>
     </div>
 </div>
 

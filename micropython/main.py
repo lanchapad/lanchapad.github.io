@@ -1,7 +1,6 @@
 from machine import Pin, PWM
 from umqtt.simple import MQTTClient
 import network
-import esp32
 import ujson
 import time
 
@@ -70,14 +69,14 @@ class Lancha(object):
                 self.set_right()
             elif val == 0:
                 self.set_center()
-                
-    def set_center():
+
+    def set_center(self):
         self.servo.duty(Lancha.DIR_CENTER)
 
-    def set_left():
+    def set_left(self):
         self.servo.duty(Lancha.DIR_MIN)
 
-    def set_right():
+    def set_right(self):
         self.servo.duty(Lancha.DIR_MAX)
 
     def run(self):
