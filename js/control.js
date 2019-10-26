@@ -47,19 +47,19 @@ function tooglemotor(){
   btnchk = document.getElementById("toggle");
   if (btnchk.checked == true){
     console.log("prender");
-    message = new Paho.MQTT.Message('{"motor": 1}');
+    message = new Paho.MQTT.Message('{"type": "motor","value": 1}');
     message.destinationName = "/lanchapad";
     client.send(message);
   } else {
     console.log("apagar");
-    message = new Paho.MQTT.Message('{"motor": 0}');
+    message = new Paho.MQTT.Message('{"type": "motor","value": 0}');
     message.destinationName = "/lanchapad";
     client.send(message);
   }
 }
 function direction(evt, val){
     console.log("girar " + val);
-    message = new Paho.MQTT.Message('{"direction": ' + val + '}');
+    message = new Paho.MQTT.Message('{"type": "direction", "value": ' + val + '}');
     message.destinationName = "/lanchapad";
     client.send(message);
 }
