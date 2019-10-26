@@ -21,7 +21,7 @@
     // Once a connection has been made, make a subscription and send a message.
     console.log("onConnect");
     // client.subscribe("/cloudmqtt");
-    message = new Paho.MQTT.Message("{"gamepad": "connected.."}");
+    message = new Paho.MQTT.Message('{"gamepad": "connected.."}');
     message.destinationName = "/lanchapad";
     client.send(message);
   }
