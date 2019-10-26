@@ -41,3 +41,13 @@
   function onMessageArrived(message) {
     console.log("onMessageArrived:"+message.payloadString);
   }
+
+
+function tooglemotor(){
+  btnchk = document.getElementById("toogle");
+  if (checkBox.checked == true){
+    console.log("prender");
+  } else {
+    console.log("apagar");
+  }
+}
