@@ -5,7 +5,7 @@
 	#switch > div {
 		position: absolute;
 		top: 87px;
-		left: 166px;
+		left: 50%;
 		width: 70px;
 		height: 140px;
 		border-radius: 8px;
