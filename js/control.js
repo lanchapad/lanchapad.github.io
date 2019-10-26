@@ -57,3 +57,9 @@ function tooglemotor(){
     client.send(message);
   }
 }
+function direction(elem, val){
+    console.log("girar " + val);
+    message = new Paho.MQTT.Message('{"direction": val}');
+    message.destinationName = "/lanchapad";
+    client.send(message);
+}
