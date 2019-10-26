@@ -45,7 +45,7 @@
 
 function tooglemotor(){
   btnchk = document.getElementById("toogle");
-  if (checkBox.checked == true){
+  if (btnchk.checked == true){
     console.log("prender");
   } else {
     console.log("apagar");
