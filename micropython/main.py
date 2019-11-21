@@ -59,8 +59,10 @@ class Lancha(object):
             val = payload.get("value")
             if val == 1:
                 self.motor.on()
+                print("prender motor")
             else:
                 self.motor.off()        
+                print("apagar motor")
         elif payload.get("type") == "direction":
             val = payload.get("value")
             if val == -1:
@@ -74,10 +76,10 @@ class Lancha(object):
         self.servo.duty(Lancha.DIR_CENTER)
 
     def set_left(self):
-        self.servo.duty(Lancha.DIR_MIN)
+        self.servo.duty(Lancha.DIR_MAX - 25)
 
     def set_right(self):
-        self.servo.duty(Lancha.DIR_MAX)
+        self.servo.duty(Lancha.DIR_MIN + 25)
 
     def run(self):
         # Blocking wait for message
